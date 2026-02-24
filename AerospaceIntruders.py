@@ -26,7 +26,7 @@ def find_closest_ship():
             closestship.x = ships[a].x
             poppingIndex = a
         a += 1
-    ships.pop(poppingIndex) # so is it something here I think
+    ships.pop(poppingIndex - 1) # so is it something here I think - 1 shoulf 
     return closestship
         
       
@@ -37,12 +37,11 @@ answer = ""
 for i in range(testcases):
     ships = [] 
     amountOfships = int(sys.stdin.readline().rstrip())
- #can you edit the terminal yes it is so weird the x coord is a string
     for b in range(amountOfships):
         line = (sys.stdin.readline().rstrip()).split(":")
-        name = line[0].split("_")
-        name = name[0]
-        shipclass = name[1] # what is the error(s)
+        splitline = line[0].split("_")
+        name = splitline[0]
+        shipclass = splitline[1] 
         XandY = line[1].split(",")
         x = int(XandY[0])
         y = int(XandY[1])
