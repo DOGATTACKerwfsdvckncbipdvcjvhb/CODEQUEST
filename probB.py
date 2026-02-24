@@ -1,6 +1,6 @@
 import sys
 testcases = int(sys.stdin.readline().rstrip())
-# wait commit first
+
 
 answer = "" 
 
@@ -23,4 +23,3 @@ for i in range(testcases):
     else:
         answer += "SAFE\n"    
 print(answer.rstrip())
-
