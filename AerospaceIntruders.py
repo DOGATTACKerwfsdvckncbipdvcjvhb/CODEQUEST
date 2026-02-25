@@ -3,11 +3,6 @@ import math
 
 testcases = int(sys.stdin.readline().rstrip())
 
-#wait wait wait wait
-# lets make the plan first so we dont do different things
-#okay lets start by taking inputs
-# wait so now lets make a space ship class
-# yes
 class Spaceship:
     def __init__(self, name, x, y, shipclass):
         self.name = name
@@ -26,7 +21,7 @@ def find_closest_ship():
             closestship.x = ships[a].x
             poppingIndex = a
         a += 1
-    ships.pop(poppingIndex - 1) # so is it something here I think - 1 shoulf 
+    ships.pop(poppingIndex)
     return closestship
         
       
@@ -41,7 +36,7 @@ for i in range(testcases):
         line = (sys.stdin.readline().rstrip()).split(":")
         nameAndclass = line[0].split("_")
         name = nameAndclass[0]
-        shipclass = nameAndclass[1] # what is the error(s)
+        shipclass = nameAndclass[1]
         XandY = line[1].split(",")
         x = int(XandY[0])
         y = int(XandY[1])
@@ -56,7 +51,7 @@ for i in range(testcases):
         answer += f"Destroyed Ship: {closestship.name} xLoc: {closestship.x}\n"
         
         for ac in ships:
-            Shipclass = ac.shipclass
+            shipclass = ac.shipclass
             if shipclass == 'C':
                 ac.x -= 30 
             elif shipclass == 'B':
@@ -68,4 +63,3 @@ for i in range(testcases):
     
 
 print(answer.rstrip())
-# acess
