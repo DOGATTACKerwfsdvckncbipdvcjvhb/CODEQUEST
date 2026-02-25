@@ -17,7 +17,7 @@ class Spaceship:
 
 
 def find_closest_ship(): 
-    closestship = ships[0]  
+    closestship = Spaceship(ships[0].name, ships[0].x, ships[0].y, ships[0].shipclass) 
     a = 1
     poppingIndex = 0
     while a < len(ships):
@@ -39,9 +39,9 @@ for i in range(testcases):
     amountOfships = int(sys.stdin.readline().rstrip())
     for b in range(amountOfships):
         line = (sys.stdin.readline().rstrip()).split(":")
-        splitline = line[0].split("_")
-        name = splitline[0]
-        shipclass = splitline[1] 
+        nameAndclass = line[0].split("_")
+        name = nameAndclass[0]
+        shipclass = nameAndclass[1] # what is the error(s)
         XandY = line[1].split(",")
         x = int(XandY[0])
         y = int(XandY[1])
