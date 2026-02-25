@@ -17,7 +17,6 @@ for i in range(testCases):
         else:
             position = alphabet.index(a)
             message += alphabet[position - shift]
-
     answer += message + '\n'
 
 print(answer.rstrip())
