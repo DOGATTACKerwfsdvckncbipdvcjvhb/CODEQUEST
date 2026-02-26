@@ -35,7 +35,7 @@ for i in range(testcases):
 productNames = sorted(products.keys()) ## sort wont work because it gets A2100 from sort as it sorts everything childs included.
 
 
-
+#stop wait run one of the coman
 
 
 # for i in products:
