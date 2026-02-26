@@ -19,8 +19,6 @@ count = 1
 sublist = productNames
 
 
-
-
 for product in productNames:
     if products[product] == 'None':
         target = product
@@ -32,7 +30,6 @@ def printHierarchy(target, depth):
     for b in sublist:
         if products[b] == target:
             printHierarchy(b, depth + 1)
-
 
 printHierarchy(target, 0)
 
