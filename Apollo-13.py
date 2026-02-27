@@ -1,5 +1,10 @@
 import sys
 
+#input
+#testcases: 2
+#356.69 163.42 346.67
+#302.26 345.92 011.79
+
 testcases = int(sys.stdin.readline().rstrip())
 answer = ""
 for i in range(testcases):
