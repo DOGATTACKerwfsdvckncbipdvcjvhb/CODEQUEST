@@ -29,9 +29,9 @@ def race():
         if line[pos - 1] == "o":
             line[pos - 1] = "x"
             track += line + "\n"
-            track += "You Crashed - GAME OVER\n"
+            track += "You Crashed - GAME OVER\n" # it works
             return track
-        
+        # what problem are we doing # give me read write acesss you didn't add a space
         line = line[:pos] + "v" + line[pos+1:]
         track += line + "\n"
     
