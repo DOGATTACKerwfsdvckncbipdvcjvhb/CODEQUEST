@@ -3,15 +3,34 @@ import sys
 
 testcases = int(sys.stdin.readline().rstrip())
 
-for i in testcases:
-    line = (sys.stdin.readline().rstrip()).split()
-    pair = line[0] 
-    pair = pair[1:len(pair) - 1]
-    pair = pair.split(",")
-    i1 = pair[0]
-       = pair[1] s 
-  #  I will commit so you can work on this out of live share
-    1[1] = sentences[0]
-    sentence2 = sentences[1]
-      sentence1 = sentence1[1:len(sentence1) - 1]
-    sentence2 = sentence2[1:len(sentence2) - 1]owordo
+def checkAnagram():
+    for char in word1:
+        if char not in word2:
+            return False
+    return True
+
+answer = ""
+
+for i in range(testcases):
+    line = sys.stdin.readline().rstrip()
+    start = line.index("\"")
+    pair = line[1:start - 2].split(",")
+    end = line.index("\"", start + 1)
+
+    sentence1 = line[start + 1: end].split()
+    sentence2 = line[end + 3: len(line) - 1].split()
+
+    word1 = sentence1[int(pair[0]) - 1]
+    word2 = sentence2[int(pair[1]) - 1]
+
+    if checkAnagram() == True:
+        answer += "Verified\n"
+    else: 
+        answer += "Intercepted\n"
+
+print(answer.rstrip())
+
+
+    
+
+
